@@ -7,6 +7,5 @@ namespace biblioteca.Models
 {
     public class GeneralBook : Books
     {
-        
     }
 }

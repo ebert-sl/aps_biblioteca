@@ -1,0 +1,59 @@
+@model IEnumerable<biblioteca.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.sName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.studentColl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mNo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.sName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentColl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mNo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -7,6 +7,7 @@ namespace biblioteca.Models
 {
     public class Librarian
     {
+        public int Id {get; set;}
         public String lName {get; set;}
         public String lAddress {get; set;}
         public int mobileNo {get; set;}

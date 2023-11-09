@@ -8,15 +8,9 @@ namespace biblioteca.Models
     public class Catalog
     {
         public ICollection<Books> books;
-
+        public int Id {get; set;}
         public String authorName {get; set;}
         public int noOfCopies {get; set;}
-
-        public Catalog(ICollection<Books> _books)
-        {
-            books = _books;
-        }
-
         public void updateInfo(){}
     }
 }
